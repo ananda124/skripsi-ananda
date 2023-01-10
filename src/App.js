@@ -1,23 +1,29 @@
-import logo from './logo.svg';
+import React, { useState } from "react";
+import logo from './th.jpg';
 import './App.css';
 
 function App() {
+  const [file, setFile] = useState();
+    function handleChange(e) {
+        console.log(e.target.files);
+        setFile(URL.createObjectURL(e.target.files[0]));
+    }
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className = "App">
+      <div className = "header">
+        <img className = "logos" src = {logo}></img>
+        <div className = "header-text">
+          <h2 style={{margin: 0 }}>Deep Fake Detector</h2>
+        </div>
+      </div>
+      <div className = "upload-container">
+        <input type = "file" accept="image/jpeg, image/png, image/jpg" onChange = {handleChange} />
+      </div>
+      <img className = "output" src = {file} />
+      <div className = "header-text">
+        <a>© Ananda Adhicitta, Universitas Buddhi Dharma 2023</a>
+      </div>
     </div>
   );
 }

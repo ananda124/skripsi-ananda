@@ -1,38 +1,43 @@
-.App {
+.logos {
+  margin: 5%;
+  max-width: 80px;
+  max-height: 80px;
+}
+.header-text { 
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.upload-container {
+  position: relative;
+  border: 1px solid #92b0b3;
+  background: #f1f1f1;
+  outline: 2px dashed #92b0b3;
+  text-align: center;
+  outline-offset: -10px;
+  padding-top: 10%;
+  padding-bottom: 15%;
+  margin: 5%;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.upload-container input:hover {
+  background: #ddd;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.upload-container:before {
+  position: absolute;
+  bottom: 30%;
+  text-align: center;
+  content: " (or) Drag and Drop files here. ";
+  color: #3f8188;
+  font-weight: 900;
 }
 
-.App-link {
-  color: #61dafb;
+.upload-btn {
+  margin-left: 300px;
+  padding: 7px 20px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.output {
+  margin: 5%;
+  width: 90%;
 }
