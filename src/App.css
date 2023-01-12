@@ -37,7 +37,21 @@
   padding: 7px 20px;
 }
 
+.text-hasil {
+  margin-bottom: 20%;
+}
+
+.hasil {
+  padding: 5%;
+}
+
 .output {
   margin: 5%;
   width: 90%;
+}
+
+@media (max-width: 1000px) {
+.text-hasil {
+  margin-bottom: 5%;
+}
 }

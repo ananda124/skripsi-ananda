@@ -1,30 +1,19 @@
-import React, { useState } from "react";
-import logo from './th.jpg';
+import React, { useState }  from "react";
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import './App.css';
+import Home from './home';
+import Hasil from './hasil';
 
 function App() {
-  const [file, setFile] = useState();
-    function handleChange(e) {
-        console.log(e.target.files);
-        setFile(URL.createObjectURL(e.target.files[0]));
-    }
-
+  const [image, setImage] = useState(null)
+  
   return (
-    <div className = "App">
-      <div className = "header">
-        <img className = "logos" src = {logo}></img>
-        <div className = "header-text">
-          <h2 style={{margin: 0 }}>Deep Fake Detector</h2>
-        </div>
-      </div>
-      <div className = "upload-container">
-        <input type = "file" accept="image/jpeg, image/png, image/jpg" onChange = {handleChange} />
-      </div>
-      <img className = "output" src = {file} />
-      <div className = "header-text">
-        <a>© Ananda Adhicitta, Universitas Buddhi Dharma 2023</a>
-      </div>
-    </div>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/"  element={<Home setImage={setImage} />} />
+        <Route path="/hasil" element={<Hasil image={image} />} />
+      </Routes>
+    </BrowserRouter>
   );
 }
 
