@@ -1,16 +1,16 @@
 {
   "files": {
     "main.css": "/skripsi-ananda/static/css/main.843ce45f.css",
-    "main.js": "/skripsi-ananda/static/js/main.599a0d8a.js",
+    "main.js": "/skripsi-ananda/static/js/main.2040b751.js",
     "static/js/787.1ea3353a.chunk.js": "/skripsi-ananda/static/js/787.1ea3353a.chunk.js",
     "static/media/th.jpg": "/skripsi-ananda/static/media/th.e2f96fdd4752041e0263.jpg",
     "index.html": "/skripsi-ananda/index.html",
     "main.843ce45f.css.map": "/skripsi-ananda/static/css/main.843ce45f.css.map",
-    "main.599a0d8a.js.map": "/skripsi-ananda/static/js/main.599a0d8a.js.map",
+    "main.2040b751.js.map": "/skripsi-ananda/static/js/main.2040b751.js.map",
     "787.1ea3353a.chunk.js.map": "/skripsi-ananda/static/js/787.1ea3353a.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.843ce45f.css",
-    "static/js/main.599a0d8a.js"
+    "static/js/main.2040b751.js"
   ]
 }
