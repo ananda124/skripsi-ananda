@@ -4,10 +4,18 @@ import logo from './th.jpg';
 
 function Home(props) {
     const navigate = useNavigate();
+    var imageCheck = Boolean(true);
 
     function handleChange(e) {
-        props.setImage(URL.createObjectURL(e.target.files[0]));
-        navigate("/hasil");
+      for(var i=0; i<e.target.files.length; i++){
+        if (!e.target.files[i].name.match(/\.(jpg|jpeg|png|gif)$/)) {
+          imageCheck = false;
+        }
+      }
+        if(imageCheck=true){
+          props.setImage(URL.createObjectURL(e.target.files[0]));
+          navigate("/hasil");
+        }
     }
 
     return (

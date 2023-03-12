@@ -1,7 +1,13 @@
 import logo from './th.jpg';
+import { useNavigate } from 'react-router-dom';
 
 function Hasil(props) {
   var random = Math.random() < 0.5 ? "Asli" : "Palsu";
+  const navigate = useNavigate();
+
+  function handleClick() {
+    navigate("/home");
+  }
 
     return (
         <div>
@@ -15,7 +21,7 @@ function Hasil(props) {
               <div className = "hasil col-12 col-md-4">
                 <h1 className = "text-hasil">Gambarmu {random}</h1>
                 <br></br>
-                <button className = "btn-dark" onClick={() => window.location.href="/"} style={{textAlign: "center"}}>Try Another Image</button>       
+                <button className = "btn-dark" onClick={ handleClick } style={{textAlign: "center"}}>Try Another Image</button>       
             </div>
         
             <div className = "col-12 col-md-8">

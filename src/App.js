@@ -8,9 +8,9 @@ function App() {
   const [image, setImage] = useState(null)
   
   return (
-    <BrowserRouter>
+    <BrowserRouter basename={process.env.PUBLIC_URL}>
       <Routes>
-        <Route path="/"  element={<Home setImage={setImage} />} />
+        <Route path="/home"  element={<Home setImage={setImage} />} />
         <Route path="/hasil" element={<Hasil image={image} />} />
       </Routes>
     </BrowserRouter>
